@@ -1,5 +1,6 @@
 /*jshint node:true*/
 'use strict';
+//This was an excercise shown in chapter 4.
 
 var Stack = require('./stack');
 
