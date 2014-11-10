@@ -56,7 +56,38 @@ LList.prototype = {
             console.log(currNode.next.element);
             currNode = currNode.next;
         }
-    }
+    },
+    
+    //exercise 1
+    advance: function(current, n) {
+	while(n>0 && current.next !== null) {
+	    current = current.next;
+	    n--;
+	}
+	return current;
+    },
+
+    //excercise 2
+    back: function(current, n) {
+	while(n>0 && this.findPrevious(current) !== null) {
+	    current = this.findPrevious(current);
+	    n--;
+	}
+	return current;
+    },
+
+    //excercise 3
+    show: function (current) {
+	console.log(current.element);
+    },
+
+    //excercise 6
+    add: function(newN, curr) {
+	var newNode = new Node(newN);
+	curr.next = newNode;
+	newNode.next = this.head.next;
+    };
+	
 };
 
 module.exports = LList;
